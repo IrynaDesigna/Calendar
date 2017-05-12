@@ -1,0 +1,28 @@
+<div class="event-list">
+	<ul class="events">
+		<li ng-repeat="event in $ctrl.events">
+			<div class="event-name"> 
+				<div>{{event.name}}</div>
+				<button class="del" ng-click="$ctrl.delEvent($event)" id="{{event.name + event.from + event.to}}">
+					<i class="fa fa-trash" aria-hidden="true" id="{{event.name + event.from + event.to}}"></i>
+				</button>
+			</div>
+			<div class="time">
+				<div>From: {{event.from}}</div>
+				<div>To: {{event.to}}</div>
+			</div>
+			<div class="event-descr">
+				<div>Description:</div>
+			 	<div>{{event.descr}}</div>
+			</div>
+		</li>
+	</ul>
+	<div class="btns">
+		<a href="/" class="close">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</a>
+		<a class="add" ng-click="$ctrl.eventDate($event)" href="/add-date-event">
+			<i class="fa fa-plus" aria-hidden="true"></i>
+		</a>
+	</div>
+</div>

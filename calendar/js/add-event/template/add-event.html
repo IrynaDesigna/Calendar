@@ -1,0 +1,60 @@
+<form action="/" ng-submit="$ctrl.addEvent($event)">
+	<div class="name">
+		<label for="name">Name: </label>
+		<input id="name" type="text" placeholder="Your event" ng-model="$ctrl.eventName" required="">
+	</div>
+	<div class="chose-date">
+		<div class="year">
+			<div>Enter year: </div>
+			<div class="">
+				<input type="text" placeholder="{{$ctrl.thisDay | date : 'yyyy'}}" ng-model="$ctrl.dateYear" required="">
+			</div>
+		</div>
+		<div class="month">
+			<div>Enter month: </div>
+			<div class="">
+				<input type="text" placeholder="{{$ctrl.thisDay | date : 'MM'}}" ng-model="$ctrl.dateMonth" required="">
+			</div>
+		</div>
+		<div class="">
+			<div>Enter day: </div>
+			<div class="">
+				<input type="text" placeholder="{{$ctrl.thisDay | date : 'dd'}}" ng-model="$ctrl.dateDay" required="">
+			</div>
+		</div>
+	</div>
+	<div class="from">
+		<div>From: </div>
+		<div class="from-time">
+			<input type="text" placeholder="00" ng-model="$ctrl.eventStart" required="">
+			<span> : </span>
+			<input type="text" placeholder="00" ng-model="$ctrl.eventStart1" required="">
+		</div>
+	</div>
+	<div class="to">
+		<div>To: </div>
+		<div class="to-time">
+			<input type="text" placeholder="00" ng-model="$ctrl.eventEnd" required="">
+			<span> : </span>
+			<input type="text" placeholder="00" ng-model="$ctrl.eventEnd1" required="">
+		</div>
+	</div>	
+	<div class="description">
+		<label for="event-description">Description: </label>
+		<textarea 
+			name="event-description"
+			id="event-description"
+			cols="30" rows="10"
+			ng-model="$ctrl.eventDescription"
+			required></textarea>
+	</div>
+	<p>{{$ctrl.err}}</p>
+	<div class="btns">
+		<a href="/" class="close">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</a>
+		<button class="add">
+			<i class="fa fa-plus" aria-hidden="true"></i>
+		</button>
+	</div>
+</form>

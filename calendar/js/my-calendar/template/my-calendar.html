@@ -1,0 +1,18 @@
+<div class="preview"></div> 
+<h1>{{$ctrl.month[15].day | date : 'yyyy'}}</h1>
+<div class="month">
+  	<button class="back" ng-click="$ctrl.renderPrevMonth($event)"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+  	<h2>{{ $ctrl.month[15].day | date : 'MMMM' }}</h2>
+  	<button class="forward" ng-click="$ctrl.renderNextMonth($event)"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+</div>
+<div class="days-container">
+    <ul class="day-names">
+  	   <li ng-repeat="dayName in $ctrl.dayNames" class="day-name">{{ dayName }}</li>
+  	</ul>
+    <div class="days">
+    	 <a href="add-date-event" ng-repeat="day in $ctrl.month" class="day" ng-class="{today : day.isToday, currentMonth : day.currentMonth, lessSize : day.lessSize, evented: day.hasEvent}" ng-click="$ctrl.eventDate($event)" id="{{day.day}}">{{ day.day | date : 'd'}}</a>
+    </div>
+</div>
+<div class="add-event">
+  	<a href="add-event"><i class="fa fa-plus" aria-hidden="true"></i></a>
+</div>

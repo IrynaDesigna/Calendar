@@ -1,0 +1,60 @@
+event-list {
+	width: 100%;
+}
+
+.event-list {
+	background: url(../../../img/bg.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.event-name {
+	background: #277770;
+	padding: 5px 15px;
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.event-name .del {
+	background: none;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 20px;
+}
+
+.time {
+	display: flex;
+}
+
+.time div {
+	width: 50%;
+	border: 2px solid #277770;
+	padding: 5px 15px;
+	color: #277770;
+	font-weight: 600;
+}
+
+.time div:first-child {
+	border-right: 1px solid #277770;
+}
+
+.time div:last-child {
+	border-left: 1px solid #277770;
+
+}
+
+.event-descr {
+	padding: 5px 15px;
+	border: 2px solid #277770;
+	border-top: none;
+	color: #277770;
+}
+
+.event-descr div:first-child {
+	font-weight: bold;
+}

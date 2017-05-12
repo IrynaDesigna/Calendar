@@ -1,0 +1,157 @@
+add-date-event form {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+add-date-event .name,
+add-date-event .from,
+add-date-event .to,
+add-date-event .description {
+	width: 80%;
+	margin-left: 10%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+add-date-event h1,
+add-date-event div:first-child {
+	width: 100%;
+	color: white;
+	letter-spacing: 1px;
+	height: 12%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+add-date-event p {
+	color: #ff0000;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.btns-landscape {
+	display: none;
+	margin-left: 60px;
+}
+
+add-date-event h1 {
+	font-family: 'Lobster', cursive;
+}
+
+add-date-event h2 {
+	font-size: 2rem;
+	font-family: 'Lobster', cursive;
+}
+
+add-date-event h1 {
+	background: #277770;
+	font-size: 2.5rem;
+}
+
+add-date-event .name,
+add-date-event .from,
+add-date-event .to {
+	height: 10%;
+}
+
+add-date-event .description {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.from div:first-child,
+.to div:first-child {
+	color: #277770;
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.from-time,
+.to-time {
+	display: flex;
+	justify-content: space-between;
+}
+
+add-date-event input {
+	width: 40px;
+	background: none;
+	height: 30px;
+	border: 2px solid #277770; 
+	border-radius: 4px;
+	color: #277770;
+	outline: none;
+	padding-left: 20px;
+	font-size: 16px;
+}
+
+#name {
+	width: 160px;
+}
+
+add-date-event .name label,
+add-date-event .description label {
+	color: #277770;
+	font-size: 18px;
+	font-weight: bold
+}
+
+.description textarea {
+	height: 60px;
+	width: 100%;
+	background: none;
+	border: 2px solid #277770; 
+	border-radius: 4px;
+	color: #277770;
+	outline: none;
+	padding: 15px;
+	font-size: 16px;
+	margin-top: 10px;
+	box-sizing: border-box;
+	max-height: 120px;
+	max-width: 100%;
+}
+
+@media (orientation: landscape) {
+
+	add-date-event h1 {
+	    font-size: 1.5rem;
+	}
+
+	add-date-event h2 {
+	    font-size: 1.5rem;
+	}
+
+	add-date-event .btns {
+		display: none;
+	}
+
+	.btns-landscape {
+		display: flex;
+	}
+
+
+	add-date-event input {
+	    height: 24px;
+	}
+
+	add-date-event .add {
+		background: #68bdb6;
+		margin-right: 0;
+	}
+
+	add-date-event .add,
+	add-date-event .close {
+		width: 25px;
+    	height: 25px;
+	}
+
+
+}
